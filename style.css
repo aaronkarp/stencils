@@ -7,13 +7,58 @@
 body {
   background-color: #fff;
   color: #000;
+  text-align: center;
 }
 
-.stencil-list {
+.stencil-list,
+.link-list {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 80%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 50%;
   margin: 0 auto;
+}
+
+.stencil-list-item {
+  width: 40%;
+}
+
+.stencil-expand {
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.stencil-expand:hover {
+  background-color: #eee;
+}
+
+.stencil-thumbnail {
+  max-width: 100%;
+}
+
+.stencil-list-item {
+  position: relative;
+}
+
+.stencil-details {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 200px;
+  z-index: 1;
+}
+
+.stencil-details.open {
+  display: block;
 }

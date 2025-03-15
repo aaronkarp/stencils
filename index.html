@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>istand4.us</title>
-    <link href="styles.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
     <main>
@@ -15,12 +15,36 @@
       </p>
       <ul class="stencil-list">
         <li class="stencil-list-item">
-          <button><img src="" alt="" /></button>
-          <div class="stencil-details"></div>
+          <button class="stencil-expand"><img src="img/hope.svg" alt="Hope has two daughters - Anger and Courage. And they are both beautiful." class="stencil-thumbnail" /></button>
+          <div class="stencil-details">
+            <div>
+              <p>12" x 18"</p>
+              <ul class="link-list">
+                <li class="link-list-item"><a href="pdf/hope-12x18-url.pdf" target="_blank">URL</a></li>
+                <li class="link-list-item"><a href="pdf/hope-12x18-no-url.pdf" target="_blank">No URL</a></li>
+              </ul>
+            <div>
+              <p>18" x 24"</p>
+              <ul class="link-list">
+                <li class="link-list-item"><a href="pdf/hope-18x24-url.pdf" target="_blank">URL</a></li>
+                <li class="link-list-item"><a href="pdf/hope-18x24-no-url.pdf" target="_blank">No URL</a></li>
+              </ul>
+            </div>
+          </div>
         </li>
       </ul>
-      <script type="javascript"></script>
     </main>
     <footer></footer>
+    <script>
+      const buttons = document.getElementsByClassName('stencil-expand');
+      for (const button of buttons) {
+        console.log(button);
+        button.addEventListener('click', e => {
+          e.preventDefault();
+          const panel = button.parentElement.getElementsByClassName('stencil-details')[0];
+          panel.classList.toggle('open');
+        });
+      }
+    </script>
   </body>
 </html>
