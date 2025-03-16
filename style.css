@@ -20,10 +20,11 @@ body {
   justify-content: space-evenly;
   width: 50%;
   margin: 0 auto;
+  padding: 0;
 }
 
 .stencil-list-item {
-  width: 40%;
+  width: 300px;
 }
 
 .stencil-expand {

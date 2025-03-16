@@ -38,7 +38,6 @@
     <script>
       const buttons = document.getElementsByClassName('stencil-expand');
       for (const button of buttons) {
-        console.log(button);
         button.addEventListener('click', e => {
           e.preventDefault();
           const panel = button.parentElement.getElementsByClassName('stencil-details')[0];
