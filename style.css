@@ -5,8 +5,8 @@
 }
 
 body {
-  background-color: #fff;
-  color: #000;
+  background-color: #fafafa;
+  color: #111;
   text-align: center;
 }
 
@@ -18,48 +18,77 @@ body {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-evenly;
-  width: 50%;
   margin: 0 auto;
   padding: 0;
 }
 
+.stencil-list {
+  margin-top: 2rem;
+}
+
+.link-list {
+  width: 50%;
+}
+
 .stencil-list-item {
-  width: 300px;
+  width: 18.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.stencil-list-item.open {
+  background-color: #fafafa;
+  z-index: 3;
+}
+
+.stencil-list-item.open .stencil-expand:hover {
+  box-shadow: none;
+  scale: 100%;
 }
 
 .stencil-expand {
+  border: 1px solid #111;
   background-color: #fff;
-  border: 1px solid #000;
-  width: 300px;
-  height: 200px;
+  width: 18.75rem;
   margin: 0 auto;
   padding: 0;
   position: relative;
   z-index: 2;
+  scale: 100%;
+  transition: scale 300ms;
 }
 
 .stencil-expand:hover {
-  background-color: #eee;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.25);
+  scale: 105%;
+}
+
+.stencil-expand:active {
+  scale: 95%;
+  box-shadow: none;
 }
 
 .stencil-thumbnail {
   max-width: 100%;
 }
 
-.stencil-list-item {
-  position: relative;
-}
-
 .stencil-details {
   display: none;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 200px;
+  top: -1rem;
+  left: -1rem;
+  width: calc(100% + 2rem);
+  padding: 14rem 1rem 1rem 1rem;
   z-index: 1;
+  border: 1px solid #111;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.25);
 }
 
 .stencil-details.open {
   display: block;
+  background-color: #fafafa;
+}
+
+.link-size {
+  margin-bottom: 0;
 }
